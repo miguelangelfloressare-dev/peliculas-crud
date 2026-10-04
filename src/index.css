@@ -1,0 +1,39 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+body {
+  /* Ruta de tu imagen en la carpeta public o una URL de internet */
+  background-image: url('/wallpaperbetter.jpg'); 
+  /* Si usas una de internet sería: background-image: url('https://tu-enlace.com/imagen.jpg'); */
+  
+  background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita como mosaico */
+  background-attachment: fixed; /* Hace que la imagen se quede quieta cuando haces scroll */
+  
+  padding: 20px;
+  color: #333;
+  min-height: 100vh; /* Asegura que tome todo el alto de la pantalla */
+}
+
+/* Contenedores */
+.catalog, .form-container { max-width: 800px; margin: 0 auto; }
+.catalog__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+.catalog__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
+
+/* Tarjetas */
+.movie-card { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.movie-card__title { font-size: 1.2rem; margin-bottom: 0.5rem; color: #2c3e50; }
+.movie-card__genre, .movie-card__director { color: #666; font-size: 0.9rem; margin-bottom: 0.5rem; }
+.movie-card__actions { display: flex; gap: 0.5rem; margin-top: 1rem; }
+
+/* Formularios */
+.movie-form { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+.movie-form input { padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; }
+
+/* Botones y Utilitarios */
+.btn { padding: 8px 12px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; font-size: 0.9rem; text-align: center; }
+.btn--primary { background: #3498db; color: white; }
+.btn--edit { background: #f39c12; color: white; flex: 1; }
+.btn--delete { background: #e74c3c; color: white; flex: 1; }
+.btn--back { background: #bdc3c7; color: #333; display: inline-block; margin-bottom: 1rem; }
+.status { font-weight: bold; margin-bottom: 1rem; }
+.status--error { color: #e74c3c; }
